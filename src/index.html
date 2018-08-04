@@ -1,0 +1,15 @@
+<template id="template-app-index">
+  <app-main></app-main>
+</template>
+
+<script>
+class AppIndex extends HTMLElement {
+  connectedCallback() {
+    const shadow = this.attachShadow({ mode: 'open' });
+    shadow.appendChild(AppIndex.template.content.cloneNode(true));
+  }
+}
+
+AppIndex.template = document.currentScript.ownerDocument.getElementById('template-app-index');
+customElements.define('app-index', AppIndex);
+</script>
