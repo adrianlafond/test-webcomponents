@@ -4,5 +4,5 @@ Testing web components
 ## To run
 ```
 npm install
-npm test
+npm start
 ```
